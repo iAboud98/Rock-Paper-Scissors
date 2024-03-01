@@ -5,12 +5,18 @@
 int main (){
 
     int choice;
-    printf("Choose 1 for Rock, 2 for Paper, 3 for Scissors :   ");
-    scanf("%d",&choice);
-    
     srand((unsigned int)time(NULL));
     int min = 1;
     int max = 3;
+
+    while(1){
+
+    printf("Choose 1 for Rock, 2 for Paper, 3 for Scissors, 0 to quit :   ");
+
+    scanf("%d",&choice);
+    if (choice == 0){
+        break;
+    }
 
     int computerChoice = min + rand() % (max - min + 1);
     
@@ -31,27 +37,28 @@ int main (){
     }
 
     if (choice == computerChoice){
-        printf("\nDraw");
+        printf("\nDraw\n");
     }
 
     if(choice == 1){
         if (computerChoice == 2){
-            printf("\nYou lose.");
+            printf("\nYou lose.\n");
         }else if (computerChoice == 3){
-            printf("\nYou win.");
+            printf("\nYou win.\n");
         }
     }else if (choice == 2){
         if (computerChoice == 1){
-            printf("\nYou win.");
+            printf("\nYou win.\n");
         }else if (computerChoice == 3){
-            printf("\nYou lose.");
+            printf("\nYou lose.\n");
         }
     }else if (choice == 3){
         if (computerChoice == 1){
-            printf("\nYou lose.");
+            printf("\nYou lose.\n");
         }else if(computerChoice == 2){
-            printf("\nyou win.");
+            printf("\nyou win.\n");
         }
+    }
     }
 
     return 0;
