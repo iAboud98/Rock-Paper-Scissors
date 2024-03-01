@@ -30,6 +30,29 @@ int main (){
         printf("\nComputer choose Scissors");
     }
 
+    if (choice == computerChoice){
+        printf("\nDraw");
+    }
+
+    if(choice == 1){
+        if (computerChoice == 2){
+            printf("\nYou lose.");
+        }else if (computerChoice == 3){
+            printf("\nYou win.");
+        }
+    }else if (choice == 2){
+        if (computerChoice == 1){
+            printf("\nYou win.");
+        }else if (computerChoice == 3){
+            printf("\nYou lose.");
+        }
+    }else if (choice == 3){
+        if (computerChoice == 1){
+            printf("\nYou lose.");
+        }else if(computerChoice == 2){
+            printf("\nyou win.");
+        }
+    }
 
     return 0;
 }
