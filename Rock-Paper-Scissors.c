@@ -22,6 +22,14 @@ int main (){
         printf("\nYou choose Scissors");
     }
 
+    if(computerChoice == 1){
+        printf("\nComputer choose Rock");
+    }else if (computerChoice == 2 ){
+        printf("\nComputer choose Paper");
+    }else if (computerChoice == 3){
+        printf("\nComputer choose Scissors");
+    }
+
 
     return 0;
 }
